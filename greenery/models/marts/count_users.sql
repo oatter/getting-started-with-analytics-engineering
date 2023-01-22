@@ -6,6 +6,6 @@
 }}
 
 select 
-    count(distinct user_id) as user_count
+    count(distinct user_guid) as user_count
 
-from {{ source('greenery', 'users') }}
+from {{ ref('stg_greenery__users') }}

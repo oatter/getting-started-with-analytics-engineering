@@ -1,14 +1,14 @@
 with users_with_order_count as (
 
     select
-        user_id
+        user_guid
         , case
-            when count(order_id) = 1 then 'one_purchase'
-            when count(order_id) = 2 then 'two_purchases'
-            when count(order_id) >= 3 then 'three_plus_purchases'
+            when count(order_guid) = 1 then 'one_purchase'
+            when count(order_guid) = 2 then 'two_purchases'
+            when count(order_guid) >= 3 then 'three_plus_purchases'
         end as order_count
 
-    from {{ source('greenery', 'orders')}}
+    from {{ ref('stg_greenery__orders')}}
     group by 1
 
 )

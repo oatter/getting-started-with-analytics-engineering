@@ -6,12 +6,10 @@ sources:
     database: greenery
 
     tables:
-      - name: address
+      - name: addresses
         description: Greenery address user
-      - name: event
+      - name: events
         description: Greenery event
-      - name: mushrooms
-        description: Greenery mushrooms
       - name: order_items
         description: Greenery order items
       - name: orders
