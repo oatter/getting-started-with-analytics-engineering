@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: average_order_per_hour
+    description: Average number of order per hour
+    columns: 
+      - name: average_order_count
+        description: Average order count
+  - name: user_with_order_count
+    description: User a order , 2 order and 3 or more order
+    columns: 
+      - name: order_count
+      - name: user_count
+  - name: count_users
+    description: count user
+    columns:
+      - name: user_count
