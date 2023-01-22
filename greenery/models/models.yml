@@ -6,12 +6,20 @@ models:
     columns: 
       - name: average_order_count
         description: Average order count
+        tests: 
+          - not_null
   - name: user_with_order_count
     description: User a order , 2 order and 3 or more order
     columns: 
       - name: order_count
+        tests:
+          - not_null
       - name: user_count
+        tests:
+          - not_null
   - name: count_users
     description: count user
     columns:
       - name: user_count
+        tests: 
+          - not_null
